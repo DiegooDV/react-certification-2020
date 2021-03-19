@@ -27,7 +27,7 @@ const Header = () => {
     <>
       <div className={switchMode ? 'header dark' : 'header'}>
         <div className="logo-nav">
-          <a href="#">
+          <a href="#" className="logo-link">
             <div className="logo-container">
               <img className="logo" src={logo} alt="logo" />
               <h1>&nbsp;MyTube</h1>

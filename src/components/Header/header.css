@@ -10,8 +10,6 @@
   background: rgb(27, 27, 27);
 }
 
-
-
 .inline-elements {
   list-style: none;
   display: flex;
@@ -191,4 +189,10 @@
   .search-bar-nav {
     display: none;
   }
+}
+
+.logo-link:hover
+{
+  color: white;
+  text-decoration: none;
 }

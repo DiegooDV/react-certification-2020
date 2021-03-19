@@ -1,12 +1,56 @@
 .card-item{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    flex-basis: calc(30% - 22px);
-    max-height: 500px;
-    background-color: white;
+    height: 62vh;
 }
 
 .card-item:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.card-link{
+    text-decoration: none;
+}
+
+.card-text
+{
+    color: rgb(83, 83, 83);
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.card-text:hover
+{
+    color: rgb(124, 124, 124);
+}
+.card-title
+{
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    margin-bottom: 0px;
+
+}
+.card-date
+{
+    font-size: 13px;
+    margin-left: 10px;
+    color:rgb(148, 147, 147);
+}
+
+.image-channel{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.image-channel:hover{
+    transform: scale(1.2);
+}
+
+.card-channel-title
+{
+    color: black;
+    margin: 0 0 10px 12px;
+    font-size: 17px;
+    font-weight: bold;
+}

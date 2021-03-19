@@ -7,6 +7,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const channelItem = items[0];
+items.shift();
 const HomePage = () => (
   <>
     <Header />
@@ -19,6 +21,11 @@ const HomePage = () => (
               title={item.snippet.title}
               description={item.snippet.description}
               thumbnail={item.snippet.thumbnails.high.url}
+              date={item.snippet.publishedAt}
+              url ={`https://www.youtube.com/watch?v=${item.id.videoId }`}
+              channel={channelItem.snippet.channelTitle}
+              channelImage={channelItem.snippet.thumbnails.high.url}
+              channelUrl={`https://www.youtube.com/channel/${channelItem.id.channelId}`}
             />
           </Col>
         ))}
