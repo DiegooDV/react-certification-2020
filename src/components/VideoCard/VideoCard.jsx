@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import splitString from '../../shared/utils';
 
 const VideoCard = (props) => (
   <div>
@@ -16,7 +17,7 @@ const VideoCard = (props) => (
         <Row>
           <Col xs={2} >
           <a href={props.channelUrl} className="card-link">
-          <img src={props.channelImage} className="image-channel" />
+          <img src={props.channelImage} className="image-channel" alt={props.channel} />
           </a>
           </Col>
           <Col xs={10}>
@@ -43,18 +44,5 @@ const VideoCard = (props) => (
     </Card>
   </div>
 );
-
-const splitString = (str, maxChar) => {
-
-  if(str.length > maxChar)
-  {
-    return str.substring(0, maxChar) + "...";
-  }
-  else{
-    return str;
-  }
-  
-}
-
 
 export default VideoCard;

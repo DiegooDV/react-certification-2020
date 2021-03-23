@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import logo from '../../assets/logo.png';
-import userDefault from '../../assets/userDefault.png';
+import SwitchModeItem from '../SwitchModeItem/SwitchModeItem';
+import logo from '../../shared/assets/logo.png';
+import userDefault from '../../shared/assets/userDefault.png';
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -11,7 +12,7 @@ import {
   faSun,
   faMoon,
 } from '@fortawesome/free-solid-svg-icons';
-import Switch from '@material-ui/core/Switch';
+
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -53,21 +54,19 @@ const Header = () => {
               <div className="inline-elements">
                 {switchMode ? (
                   <>
-                    <FontAwesomeIcon className="icon" icon={faMoon} />
-                    <Switch
-                      className="mobile-option"
-                      checked={switchMode}
-                      onChange={handleSwitchMode}
-                    />
+                  <SwitchModeItem
+                  icon={faMoon}
+                  checkedStatus={switchMode}
+                  onChange={handleSwitchMode}
+                  isMobile={true} />
                   </>
                 ) : (
                   <>
-                    <FontAwesomeIcon className="icon" icon={faSun} />
-                    <Switch
-                      className="mobile-option"
-                      checked={switchMode}
-                      onChange={handleSwitchMode}
-                    />
+                    <SwitchModeItem
+                  icon={faSun}
+                  checkedStatus={switchMode}
+                  onChange={handleSwitchMode}
+                  isMobile={true} />
                   </>
                 )}
               </div>
@@ -83,21 +82,19 @@ const Header = () => {
         <ul className="right-menu inline-elements">
           {switchMode ? (
             <>
-              <li className="option" style={{ margin: '0px' }}>
-                <FontAwesomeIcon className="icon" icon={faMoon} />
-              </li>
-              <li className="option" style={{ margin: '0px' }}>
-                <Switch checked={switchMode} onChange={handleSwitchMode} />
-              </li>
+              <SwitchModeItem
+                  icon={faMoon}
+                  checkedStatus={switchMode}
+                  onChange={handleSwitchMode}
+                  isMobile={false} />
             </>
           ) : (
             <>
-              <li className="option" style={{ margin: '0px' }}>
-                <FontAwesomeIcon className="icon" icon={faSun} />
-              </li>
-              <li className="option" style={{ margin: '0px' }}>
-                <Switch checked={switchMode} onChange={handleSwitchMode} />
-              </li>
+              <SwitchModeItem
+                  icon={faSun}
+                  checkedStatus={switchMode}
+                  onChange={handleSwitchMode}
+                  isMobile={false} />
             </>
           )}
           <li className="option">
